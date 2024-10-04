@@ -4,7 +4,7 @@
 
 # Folders
 SRC=src
-INC=boom_attacks/inc
+INC=boom-attacks/inc
 OBJ=obj
 BIN=bin
 DMP=dump
@@ -28,10 +28,6 @@ all: $(BINS) $(DUMPS)
 dumps: $(DUMPS)
 
 # Build object files
-#$(OBJ)/%.o: $(SRC)/%.S
-#	@mkdir -p $(OBJ)
-#	$(GCC) $(CFLAGS) -D__ASSEMBLY__=1 -c $< -o $@
-
 $(OBJ)/%.o: $(SRC)/%.c
 	@mkdir -p $(OBJ)
 	@mkdir -p $(DEP)
@@ -40,12 +36,15 @@ $(OBJ)/%.o: $(SRC)/%.c
 # Build executable
 $(BIN)/%.riscv: $(OBJ)/%.o
 	@mkdir -p $(BIN)
-	$(GCC) $(CFLAGS) $< $(OBJ)/stack.o -o $@
+	$(GCC) $(CFLAGS) $< -o $@
 
 # Build dump
 $(DMP)/%.dump: $(BIN)/%.riscv
 	@mkdir -p $(DMP)
 	$(OBJDUMP) -D $< > $@
+
+# Keep the temporary .o files
+.PRECIOUS: $(OBJ)/%.o
 
 # Remove all generated files
 clean:
