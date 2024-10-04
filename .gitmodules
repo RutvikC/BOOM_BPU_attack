@@ -1,0 +1,3 @@
+[submodule "boom-attacks"]
+	path = boom-attacks
+	url = https://github.com/riscv-boom/boom-attacks.git
