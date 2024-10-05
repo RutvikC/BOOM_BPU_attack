@@ -64,3 +64,6 @@ The generated bitstream will located at: `generated-src/<LONG_NAME>/obj/*.bit`
 ## Running Attacks on VCU118 FPGA
 
 We booted Buildroot Linux from an SD card on the VCU118 FPGA, with one partition for Linux and another for the attack binaries. After booting, we ran the attack binaries from the second partition. For setup details, see the [VCU118 Prototyping Guide](https://chipyard.readthedocs.io/en/1.6.2/Prototyping/VCU118.html).
+
+## License
+The code is released under GNU GPL v3.
