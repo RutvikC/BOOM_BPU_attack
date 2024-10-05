@@ -24,7 +24,7 @@ First, clone our repository to your workspace, which contains all the source fil
 
 `make all`
 
-This will compile all the binaries into the bin/ directory.
+This will compile all the binaries into the `bin/` directory.
 
 ## Configuration Files
 
