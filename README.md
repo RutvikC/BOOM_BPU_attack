@@ -18,7 +18,7 @@ First, clone our repository to your workspace, which contains all the source fil
 
 **Note:** The repo [BOOM Speculative Attacks](https://github.com/riscv-boom/boom-attacks/tree/master?tab=readme-ov-file#boom-speculative-attacks) was used to verify the susceptibility of the BOOM core to Spectre attacks. We are using some of the include files from this repository to get the cycle count for our attacks. The repository has already been added as a submodule in our repository, so you only need to pull it and build the binaries:
 
-`cd BOOM_BPU_attack\`
+`cd BOOM_BPU_attack/`
 
 `git submodule update --init`
 
